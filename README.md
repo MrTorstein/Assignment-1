@@ -11,10 +11,10 @@ Repository for assignment 1 in Brainnest's front end developer training program
     - pages
     index.html
 
-.gitattributes
+.gitattributes  
 index.html
 
 
-Task 1 is in the index.html file outside of the folder.
-Task 2 is in the folder links-and-images.
+Task 1 is in the index.html file outside of the folder.  
+Task 2 is in the folder links-and-images.  
 Task 3 is in the presentation folder.
