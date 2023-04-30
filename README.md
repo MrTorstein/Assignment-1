@@ -18,3 +18,5 @@ index.html
 Task 1 is in the index.html file outside of the folder.  
 Task 2 is in the folder links-and-images.  
 Task 3 is in the presentation folder.
+
+Link to view page: https://mrtorstein.github.io/Assignment-1
