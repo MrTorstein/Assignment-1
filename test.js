@@ -11,7 +11,10 @@ const input = document.createElement("input");
 const button = document.createElement("button");
 
 let meny;
-function Lagre_meny(tekst) {meny = tekst;}
+function Vis_tekst(tekst, lagre_variabel = false) {
+    div.textContent = tekst;
+    if (lagre_variabel != false) {lagre_variabel = tekst;}
+}
 
 let språk;
 
@@ -29,16 +32,10 @@ function Get_input_content() {
     if (språk == "Norsk") {
         fetch("./Poeng.txt")
         .then(innfil => innfil.text())
-        .then(fil_tekst => Lagre_meny(fil_tekst));
-        if (meny == "") {
-            fetch("./Poeng.txt")
-            .then(innfil => innfil.text())
-            .then(fil_tekst => Lagre_meny(fil_tekst));
-            }
-        div.textContent = meny;
+        .then(fil_tekst => Vis_tekst(fil_tekst, meny));
     }
     else {
-        div.textContent = div.textContent + "\r\nThe submitted text is not a recognised language. Please enter a recognised one."
+        div.textContent = div.textContent + "\nThe submitted text is not a recognised language. Please enter a recognised one."
     }
 };
 button.onclick = Get_input_content;
