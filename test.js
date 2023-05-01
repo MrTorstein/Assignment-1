@@ -27,7 +27,9 @@ function Get_input_content() {
     input.value = "";
     
     if (språk == "Norsk") {
-        fetch("./Poeng.txt").then(innfil => innfil.text()).then(fil_tekst => Lagre_meny(fil_tekst));
+        fetch("./Poeng.txt")
+        .then(innfil => innfil.text())
+        .then(fil_tekst => Lagre_meny(fil_tekst));
         div.textContent = meny;
     }
     else {
