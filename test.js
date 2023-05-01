@@ -30,6 +30,11 @@ function Get_input_content() {
         fetch("./Poeng.txt")
         .then(innfil => innfil.text())
         .then(fil_tekst => Lagre_meny(fil_tekst));
+        if (meny == "") {
+            fetch("./Poeng.txt")
+            .then(innfil => innfil.text())
+            .then(fil_tekst => Lagre_meny(fil_tekst));
+            }
         div.textContent = meny;
     }
     else {
