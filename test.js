@@ -10,6 +10,9 @@ div.setAttribute('style', 'white-space: pre;');
 const input = document.createElement("input");
 const button = document.createElement("button");
 
+let meny;
+function Lagre_meny(tekst) {meny = tekst;}
+
 let språk;
 
 div.textContent = "Enter a desired language. English or Norwegian.";
@@ -22,10 +25,9 @@ document.body.appendChild(button);
 function Get_input_content() {
     språk = input.value;
     input.value = "";
-    let meny;
     
     if (språk == "Norsk") {
-        fetch("./Poeng.txt").then(innfil => innfil.text()).then(fil_tekst => meny = fil_tekst);
+        fetch("./Poeng.txt").then(innfil => innfil.text()).then(fil_tekst => Lagre_meny(fil_tekst));
         div.textContent = meny;
     }
     else {
